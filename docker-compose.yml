@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  fastapi_app:
+    build: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - app_data:/app/data
+    environment:
+      - PYTHONUNBUFFERED=1
+    command: ["sh", "-c", "python generate_face_embeddings.py & uvicorn face_recognition:app --reload --host 0.0.0.0 --port 8000"]
+    restart: always
+volumes:
+  app_data:

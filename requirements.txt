@@ -1,0 +1,15 @@
+ultralytics
+numpy
+opencv-python
+scipy
+PyYAML
+facenet-pytorch
+streamlit
+fastapi
+uvicorn
+ldap3
+pycryptodome
+mediapipe
+python-dotenv
+python-multipart
+tqdm
